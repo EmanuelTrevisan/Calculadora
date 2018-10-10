@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller=".TelaLoginController">
+   <children>
+      <JFXTextField fx:id="txtLogin" labelFloat="true" layoutX="93.0" layoutY="76.0" prefHeight="30.0" prefWidth="187.0" promptText="Login de Usuário">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnLogin" layoutX="146.0" layoutY="224.0" onAction="#fazerLogin" prefWidth="68.0" textFill="#04bcff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXPasswordField fx:id="txtSenha" layoutX="93.0" layoutY="156.0" prefHeight="30.0" prefWidth="187.0" promptText="Digite a senha">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+   </children>
+</AnchorPane>

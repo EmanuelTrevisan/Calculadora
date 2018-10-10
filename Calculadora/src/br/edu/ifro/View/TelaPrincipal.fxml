@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="361.0" prefWidth="454.0" stylesheets="@../../../../../../../Desktop/Web/css/Inicio.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.TelaPrincipalController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField fx:id="txtnum1" layoutX="25.0" layoutY="46.0" prefHeight="69.0" prefWidth="202.0" promptText="Digite o Número 01" />
+      <TextField fx:id="txtnum2" layoutX="25.0" layoutY="155.0" prefHeight="69.0" prefWidth="202.0" promptText="Digite o Número 2" />
+      <TextField fx:id="txtResultado" layoutX="25.0" layoutY="279.0" prefHeight="60.0" prefWidth="202.0" promptText="O resultado da Operação é" />
+      <Label layoutX="65.0" layoutY="14.0" text="Número 1">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="59.0" layoutY="120.0" text="Número 2">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="55.0" layoutY="244.0" text="Resultado" textAlignment="CENTER" textFill="#00a1c9">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="btnSoma" layoutX="282.0" layoutY="46.0" mnemonicParsing="false" onAction="#Soma" prefHeight="42.0" prefWidth="139.0" text="Soma" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="btnSubtracao" layoutX="282.0" layoutY="101.0" mnemonicParsing="false" onAction="#Subtração" prefHeight="42.0" prefWidth="139.0" text="Subtração" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnMultiplicacao" layoutX="282.0" layoutY="160.0" mnemonicParsing="false" onAction="#Multiplicação" prefHeight="42.0" prefWidth="139.0" text="Multplicação" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDivisao" layoutX="282.0" layoutY="223.0" mnemonicParsing="false" onAction="#Divisão" prefHeight="42.0" prefWidth="139.0" text="Divisão" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
