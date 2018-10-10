@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.Control.TelaLoginController">
    <children>
-      <JFXTextField fx:id="txtLogin" labelFloat="true" layoutX="93.0" layoutY="76.0" prefHeight="30.0" prefWidth="187.0" promptText="Login de Usuário">
+      <JFXTextField fx:id="txtUsuario" labelFloat="true" layoutX="93.0" layoutY="76.0" prefHeight="30.0" prefWidth="187.0" promptText="Login de Usuário">
          <font>
             <Font size="14.0" />
          </font>

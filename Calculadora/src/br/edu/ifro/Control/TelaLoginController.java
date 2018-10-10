@@ -42,23 +42,19 @@ public class TelaLoginController implements Initializable {
     @FXML
     private JFXButton btnLogin;   
     @FXML
-    private JFXTextField txtLogin;   
+    private JFXTextField txtUsuario;   
     @FXML
     private JFXPasswordField txtSenha;
-    private Label lblUsuarioInvalido; /*
-    @FXML 
-    private JFXButton btncadastrar; */
+   
     
     @FXML
     private void fazerLogin(ActionEvent event) throws IOException {
        
-        
-
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Hotel");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
         EntityManager em = emf.createEntityManager();
-        Query query = em.createQuery("SELECT senha FROM Login as senha WHERE senha.cpf = :cpf");
+        Query query = em.createQuery("SELECT senha FROM Login as senha WHERE senha.usuario = :usuario");
 
-        query.setParameter("cpf", txtLogin.getText());
+        query.setParameter("usuario", txtUsuario.getText());
 
         List<Login> l = query.getResultList();
 
@@ -70,10 +66,10 @@ public class TelaLoginController implements Initializable {
             if (login.getSenha().equals(senha)) {
                 JOptionPane.showMessageDialog(null, "Login efetuado com sucesso");
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/view/MenuPrincipal.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("/br/edu/ifro/View/TelaPrincipal.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
-                stage.setTitle("Menu Principal");
+                stage.setTitle("Tela Principal");
                 stage.setScene(scene);
                 stage.show();
                 ((Node) (event.getSource())).getScene().getWindow().hide();
