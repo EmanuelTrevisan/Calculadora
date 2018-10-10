@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="361.0" prefWidth="454.0" stylesheets="@../../../../../../../Desktop/Web/css/Inicio.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.TelaPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="361.0" prefWidth="454.0" stylesheets="@../../../../../../../Desktop/Web/css/Inicio.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.Control.TelaPrincipalController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <TextField fx:id="txtnum1" layoutX="25.0" layoutY="46.0" prefHeight="69.0" prefWidth="202.0" promptText="Digite o Número 01" />
