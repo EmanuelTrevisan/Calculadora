@@ -5,6 +5,7 @@
 00000000000000 */
 package br.edu.ifro.Control;
 
+import br.edu.ifro.Model.Calculo;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -13,6 +14,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 
 /**
@@ -36,6 +40,21 @@ public class TelaPrincipalController implements Initializable {
         Double num2 = Double.parseDouble(txtnum2.getText());
         Double resultado = num1 + num2;
         txtResultado.setText(resultado.toString());
+        
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
+        EntityManager em = emf.createEntityManager();
+        Calculo calculo = new Calculo();
+
+        calculo.setNum1(Double.parseDouble(txtnum1.getText()));
+        calculo.setNum2(Double.parseDouble(txtnum2.getText()));
+        calculo.setResultado(Double.parseDouble(txtResultado.getText()));
+        calculo.setOperacao("Soma");
+       
+        em.getTransaction().begin();
+
+        em.persist(calculo);
+
+        em.getTransaction().commit();
     }
     @FXML
      private void Subtração(ActionEvent event) {
@@ -43,6 +62,21 @@ public class TelaPrincipalController implements Initializable {
         Double num2 = Double.parseDouble(txtnum2.getText());
         Double resultado = num1 - num2;
         txtResultado.setText(resultado.toString());
+        
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
+        EntityManager em = emf.createEntityManager();
+        Calculo calculo = new Calculo();
+
+        calculo.setNum1(Double.parseDouble(txtnum1.getText()));
+        calculo.setNum2(Double.parseDouble(txtnum2.getText()));
+        calculo.setResultado(Double.parseDouble(txtResultado.getText()));
+        calculo.setOperacao("Subtração");
+       
+        em.getTransaction().begin();
+
+        em.persist(calculo);
+
+        em.getTransaction().commit();
     }
      @FXML
        private void Multiplicação(ActionEvent event) {
@@ -50,6 +84,21 @@ public class TelaPrincipalController implements Initializable {
         Double num2 = Double.parseDouble(txtnum2.getText());
         Double resultado = num1 * num2;
         txtResultado.setText(resultado.toString());
+        
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
+        EntityManager em = emf.createEntityManager();
+        Calculo calculo = new Calculo();
+
+        calculo.setNum1(Double.parseDouble(txtnum1.getText()));
+        calculo.setNum2(Double.parseDouble(txtnum2.getText()));
+        calculo.setResultado(Double.parseDouble(txtResultado.getText()));
+        calculo.setOperacao("Multiplicação");
+       
+        em.getTransaction().begin();
+
+        em.persist(calculo);
+
+        em.getTransaction().commit();
     }
       @FXML
       private void Divisão(ActionEvent event) {
@@ -57,6 +106,21 @@ public class TelaPrincipalController implements Initializable {
         Double num2 = Double.parseDouble(txtnum2.getText());
         Double resultado = num1 / num2;
         txtResultado.setText(resultado.toString());
+        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("calculadora");
+        EntityManager em = emf.createEntityManager();
+        Calculo calculo = new Calculo();
+
+        calculo.setNum1(Double.parseDouble(txtnum1.getText()));
+        calculo.setNum2(Double.parseDouble(txtnum2.getText()));
+        calculo.setResultado(Double.parseDouble(txtResultado.getText()));
+        calculo.setOperacao("Divisão");
+       
+        em.getTransaction().begin();
+
+        em.persist(calculo);
+
+        em.getTransaction().commit();
     }
      
     
